@@ -1,3 +1,10 @@
-export default function Page() {
-  return <h1>Hello, Next.js!</h1>;
-}
+
+const Home: React.FC = () => {
+  return (
+   <div className="">
+     <h1 className="font-bold">Home</h1>
+   </div>
+  );
+};
+
+export default Home;
