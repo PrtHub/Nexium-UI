@@ -9,7 +9,7 @@ const NavigationBar = () => {
   const [isSearchFocused, setIsSearchFocused] = useState(false);
 
   return (
-    <section className='sticky top-0 w-full flex-1 border-b border-gray-300/10 backdrop-blur-md bg-black/80 z-50'>
+    <section className='sticky top-0 w-full flex-1 border-b border-gray-300/10 backdrop-blur-md z-50'>
       <Wrapper>
         <nav className='flex flex-1 items-center justify-between py-3'>
           <section className='flex items-center justify-center gap-x-10'>
