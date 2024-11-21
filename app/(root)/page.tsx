@@ -51,7 +51,7 @@ const Home: React.FC = () => {
               <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500 opacity-0 blur group-hover:opacity-50 transition-opacity duration-300" />
               <span className="relative">Browse Components</span>
             </Link>
-            <Link href="/docs" className="text-sm font-semibold leading-6 text-gray-300 hover:text-white transition-colors group">
+            <Link href="/docs/getting-started/introduction" className="text-sm font-semibold leading-6 text-gray-300 hover:text-white transition-colors group">
               Learn more <span aria-hidden="true" className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
             </Link>
           </section>

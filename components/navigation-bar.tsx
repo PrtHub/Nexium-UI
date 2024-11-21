@@ -23,7 +23,7 @@ const NavigationBar = () => {
             </Link>
             <ul className='flex items-center justify-center gap-x-5'>
             <Link 
-                href='/docs' 
+                href='/docs/getting-started/introduction' 
                 className='relative cursor-pointer font-medium capitalize text-gray-300 hover:text-white transition-colors duration-200 after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-indigo-500 after:transition-transform after:duration-300 hover:after:scale-x-100'
               >
                 Docs

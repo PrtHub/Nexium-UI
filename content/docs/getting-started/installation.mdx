@@ -1,35 +1,63 @@
 # Installation
 
-Welcome to NexiumUI! Let's get you started with installing and setting up the library.
+NexiumUI is a copy-paste UI component library, which means you don't need to install it as a package. Instead, you'll need to set up the following dependencies to use the components effectively:
 
-## Quick Start
+## 1. Create Next.js Project
+
+First, create a new Next.js project with TypeScript
 
 ```bash
-npm install nexiumui
-# or
-yarn add nexiumui
-# or
-pnpm add nexiumui
+npx create-next-app@latest my-app --typescript --tailwind --eslint
 ```
 
-## Setup
+## 2. Install Additional Dependencies
 
-Import the styles in your root layout:
+Install these additional dependencies for enhanced functionality:
 
-```tsx
-import '@nexiumui/styles/globals.css';
+```bash
+npm install clsx tailwind-merge class-variance-authority lucide-react
 ```
 
-## Usage
+## 3. Setup Utility Functions
+
+Create a new file called `lib/utils.ts` and add the following code:
 
 ```tsx
-import { Button } from 'nexiumui/components';
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
-export default function MyApp() {
-  return (
-    <Button variant="primary">
-      Click me
-    </Button>
-  );
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
 }
 ```
+
+## 4. Configure Tailwind CSS
+
+Add the following to your `tailwind.config.ts` file:
+
+```tsx
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  darkMode: ["class"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [require("tailwindcss-animate")],
+};
+export default config;
+```
+
+## 5. Start Using Components
+
+Now you're ready to start copying and pasting components from our library into your project.
+Each component page includes the full source code and usage examples.
+
+> 💡 **Tip:**  
+> When copying components, make sure to also copy any required dependencies or utility functions mentioned in the component's documentation.
